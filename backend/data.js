@@ -1,0 +1,95 @@
+import bcrypt from "bcryptjs";
+
+const data = {
+  users: [
+    {
+      name: "Himanshu",
+      email: "himanshu.p19@iiits.in",
+      password: bcrypt.hashSync("1234", 8), // we can't store the actual plain text passwprd as it is. So for that we need to have a package called bycrpt
+      // bycrpt which will receive the actual passwrod and then
+      isAdmin: true,
+    },
+    {
+      name: "User",
+      email: "user@iiits.in",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
+  products: [
+    {
+      _id: "1",
+      name: "Nike slim shirts",
+      category: "Shirts",
+      image: "/images/p1.jpg",
+      price: 119,
+      brand: "Nike",
+      countInStock: 12,
+      rating: 4.5,
+      numReviews: 10,
+      description: "High quality product",
+    },
+    {
+      _id: "2",
+      name: "Adidas slim shirts",
+      category: "Shirts",
+      image: "/images/p2.jpg",
+      price: 129,
+      brand: "Adidas",
+      countInStock: 0,
+      rating: 4.6,
+      numReviews: 21,
+      description: "High quality product",
+    },
+    {
+      _id: "3",
+      name: "Van Heusen slim shirts",
+      category: "Shirts",
+      image: "/images/p3.jpg",
+      price: 89,
+      brand: "Van Husene",
+      countInStock: 10,
+      rating: 4.2,
+      numReviews: 8,
+      description: "Medium quality product",
+    },
+    {
+      _id: "4",
+      name: "Peter England fit pants",
+      category: "Pants",
+      image: "/images/p4.jpg",
+      price: 99,
+      brand: "Peter England",
+      countInStock: 2,
+      rating: 4.4,
+      numReviews: 32,
+      description: "Meduim quality product",
+    },
+    {
+      _id: "5",
+      name: "Arrow fit pants",
+      category: "Pants",
+      image: "/images/p5.jpg",
+      price: 95,
+      brand: "Arrow",
+      countInStock: 19,
+      rating: 4.1,
+      numReviews: 30,
+      description: "Meduim quality product",
+    },
+    {
+      _id: "6",
+      name: "Puma fit pants",
+      category: "Pants",
+      image: "/images/p6.jpg",
+      price: 105,
+      brand: "Puma",
+      countInStock: 7,
+      rating: 4.5,
+      numReviews: 18,
+      description: "High quality product",
+    },
+  ],
+};
+
+export default data;
